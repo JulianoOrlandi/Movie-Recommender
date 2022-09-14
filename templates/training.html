@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Train the algorithm
+{% endblock %}
+
+{% block main %}
+<div>
+    <p class="text1">The algorithm will perform better if you provide some data about your preferences for movies. Below you can search for pictures and rate them to train the algorithm.</p>
+    <p class="text1">If you click on "Go to recommendations" button, it will take a few seconds to run the algorithm. After that, you will be automatically redirected to the recommendations page.</p>
+</div>
+<div align="center">
+    <form action="/training" method="post">
+        <input autocomplete="off" autofocus class="form-control mx-left w-auto" name="title" placeholder="Movie's Title" type="text">
+        <button class="btn btn-primary" style="margin-top: 10px"type="submit">Search</button>
+    </form>
+    <form action="/training" method="post">
+        <button class="btn btn-primary" style="margin-top: 10px"type="submit" name="train" value="train">Go to recommendations</button>
+    </form>
+</div>
+<div>
+    <table cellpadding="10px" style="margin-top: 10px">
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text2" width="35%">{{ plot }}</td>
+                <td class="text2" width="15%"><p>{{ director }}{{ director_name }}</p><p>{{ actors }}{{ actors_names }}</p></td>
+                <td width="25%"><img src="{{ poster }}" width="85%"></td>
+                <td width="25%" align="center">
+                    {% if isSuccess %}
+                    <form action="/training" method="post">
+                        <input autocomplete="off" autofocus class="form-control mx-left w-auto" id="rate" name="rate" placeholder="0.0 - 10.0" type="float" defaultValue="-1">
+                        <button class="btn btn-primary" style="margin-top: 10px" type="submit" name="rate" value="Rate">Rate</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

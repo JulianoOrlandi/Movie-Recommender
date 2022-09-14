@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <form action="/" method="get">
+            <button class="btn btn-primary" style="margin-top: 10px" type="submit" name="next" value="next">Next</button>
+        </form>
+    </div>
+    <div class="text3">{{ title }}</div>
+    <div>
+        <table cellpadding="10px" style="margin-top: 10px">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text2" width="35%">{{ plot }}</td>
+                    <td class="text2" width="15%"><p>{{ director }}{{ director_name }}</p><p>{{ actors }}{{ actors_names }}</p></td>
+                    <td width="25%"><img src="{{ poster }}" width="85%"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

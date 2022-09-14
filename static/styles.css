@@ -1,0 +1,84 @@
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+.title1 {
+    font-family: "limelight";
+    color: ghostwhite;
+}
+
+.title2 {
+    font-family: "oswald";
+    font-size: 20px;
+    color: ghostwhite;
+    margin-right: 20px;
+}
+
+.title3 {
+    font-family: "oswald";
+    font-size: 20px;
+    color: ghostwhite;
+}
+
+.container-error {
+    height: 25px;
+    margin-top: 10px;
+}
+
+.error {
+    font-family: "oswald";
+    color: darkred;
+    width: 80%;
+    margin: auto;
+    background-color: bisque;
+    border: 1px solid darkred;
+    padding: 3px;
+    padding-left: 15px;
+}
+
+.success {
+    font-family: "oswald";
+    color: darkgreen;
+    width: 80%;
+    margin: auto;
+    background-color: lightgreen;
+    border: 1px solid darkgreen;
+    padding: 3px;
+    padding-left: 15px;
+}
+
+.text1 {
+    font-family: "oswald";
+    color: dark;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top:-20px;
+}
+
+.text2 {
+    font-family: "oswald";
+    color: dark;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 5%;
+    margin-top:-20px;
+}
+
+.text3 {
+    font-family: "oswald";
+    color: dark;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.column_test {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+td {
+    vertical-align: top;
+}
